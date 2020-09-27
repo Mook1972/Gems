@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "PRJ_SQL_Patching", "PRJ_SQL_Patching\PRJ_SQL_Patching.rptproj", "{D25E1479-C90A-4DD5-9CE0-323848CCC172}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D25E1479-C90A-4DD5-9CE0-323848CCC172}.Debug|Default.ActiveCfg = Debug
+		{D25E1479-C90A-4DD5-9CE0-323848CCC172}.Debug|Default.Build.0 = Debug
+		{D25E1479-C90A-4DD5-9CE0-323848CCC172}.Debug|Default.Deploy.0 = Debug
+		{D25E1479-C90A-4DD5-9CE0-323848CCC172}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{D25E1479-C90A-4DD5-9CE0-323848CCC172}.DebugLocal|Default.Build.0 = DebugLocal
+		{D25E1479-C90A-4DD5-9CE0-323848CCC172}.Release|Default.ActiveCfg = Release
+		{D25E1479-C90A-4DD5-9CE0-323848CCC172}.Release|Default.Build.0 = Release
+		{D25E1479-C90A-4DD5-9CE0-323848CCC172}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
