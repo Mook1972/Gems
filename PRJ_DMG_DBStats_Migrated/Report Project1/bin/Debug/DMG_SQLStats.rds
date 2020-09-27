@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="DMG_SQLStats">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=USMDCKPAP6722,1113;Initial Catalog=DMG_SQLStats</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>89d427f5-a6e7-498c-8fb1-23010fc45e9d</DataSourceID>
+</RptDataSource>
