@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Chart Name="Chart1">
+        <ChartCategoryHierarchy>
+          <ChartMembers>
+            <ChartMember>
+              <Group Name="Chart1_CategoryGroup">
+                <GroupExpressions>
+                  <GroupExpression>=Fields!OrderMonth.Value</GroupExpression>
+                </GroupExpressions>
+              </Group>
+              <SortExpressions>
+                <SortExpression>
+                  <Value>=Fields!ID.Value</Value>
+                </SortExpression>
+              </SortExpressions>
+              <Label>=Fields!OrderMonth.Value</Label>
+            </ChartMember>
+          </ChartMembers>
+        </ChartCategoryHierarchy>
+        <ChartSeriesHierarchy>
+          <ChartMembers>
+            <ChartMember>
+              <Label>Order Quantity</Label>
+            </ChartMember>
+            <ChartMember>
+              <Label>Trend</Label>
+            </ChartMember>
+            <ChartMember>
+              <Label>Forecast</Label>
+            </ChartMember>
+          </ChartMembers>
+        </ChartSeriesHierarchy>
+        <ChartData>
+          <ChartSeriesCollection>
+            <ChartSeries Name="OrderQuantity">
+              <ChartDataPoints>
+                <ChartDataPoint>
+                  <ChartDataPointValues>
+                    <Y>=Sum(Fields!OrderQuantity.Value)</Y>
+                  </ChartDataPointValues>
+                  <ChartDataLabel>
+                    <Style />
+                  </ChartDataLabel>
+                  <Style>
+                    <Border>
+                      <Color>#00ffffff</Color>
+                      <Width>0.25pt</Width>
+                    </Border>
+                  </Style>
+                  <ChartMarker>
+                    <Type>Circle</Type>
+                    <Size>4pt</Size>
+                    <Style>
+                      <Border>
+                        <Color>Gray</Color>
+                      </Border>
+                      <Color>Gray</Color>
+                    </Style>
+                  </ChartMarker>
+                  <DataElementOutput>Output</DataElementOutput>
+                </ChartDataPoint>
+              </ChartDataPoints>
+              <Type>Line</Type>
+              <Style />
+              <ChartEmptyPoints>
+                <Style />
+                <ChartMarker>
+                  <Style />
+                </ChartMarker>
+                <ChartDataLabel>
+                  <Style />
+                </ChartDataLabel>
+              </ChartEmptyPoints>
+              <ValueAxisName>Primary</ValueAxisName>
+              <CategoryAxisName>Primary</CategoryAxisName>
+              <ChartSmartLabel>
+                <CalloutLineColor>Black</CalloutLineColor>
+                <MinMovingDistance>0pt</MinMovingDistance>
+              </ChartSmartLabel>
+            </ChartSeries>
+            <ChartSeries Name="Trend">
+              <ChartDataPoints>
+                <ChartDataPoint>
+                  <ChartDataPointValues>
+                    <Y>=Sum(Fields!Trend.Value)</Y>
+                  </ChartDataPointValues>
+                  <ChartDataLabel>
+                    <Style />
+                  </ChartDataLabel>
+                  <Style>
+                    <Border>
+                      <Color>CornflowerBlue</Color>
+                      <Width>1.5pt</Width>
+                    </Border>
+                    <Color>CornflowerBlue</Color>
+                  </Style>
+                  <ChartMarker>
+                    <Style />
+                  </ChartMarker>
+                  <DataElementOutput>Output</DataElementOutput>
+                </ChartDataPoint>
+              </ChartDataPoints>
+              <Type>Line</Type>
+              <Style />
+              <ChartEmptyPoints>
+                <Style />
+                <ChartMarker>
+                  <Style />
+                </ChartMarker>
+                <ChartDataLabel>
+                  <Style />
+                </ChartDataLabel>
+              </ChartEmptyPoints>
+              <ValueAxisName>Primary</ValueAxisName>
+              <CategoryAxisName>Primary</CategoryAxisName>
+              <ChartSmartLabel>
+                <CalloutLineColor>Black</CalloutLineColor>
+                <MinMovingDistance>0pt</MinMovingDistance>
+              </ChartSmartLabel>
+            </ChartSeries>
+            <ChartSeries Name="Forecast">
+              <ChartDataPoints>
+                <ChartDataPoint>
+                  <ChartDataPointValues>
+                    <Y>=Sum(Fields!Forecast.Value)</Y>
+                  </ChartDataPointValues>
+                  <ChartDataLabel>
+                    <Style />
+                  </ChartDataLabel>
+                  <Style>
+                    <Border>
+                      <Color>CornflowerBlue</Color>
+                      <Style>Dashed</Style>
+                    </Border>
+                    <Color>CornflowerBlue</Color>
+                  </Style>
+                  <ChartMarker>
+                    <Style />
+                  </ChartMarker>
+                  <DataElementOutput>Output</DataElementOutput>
+                </ChartDataPoint>
+              </ChartDataPoints>
+              <Type>Line</Type>
+              <Style />
+              <ChartEmptyPoints>
+                <Style />
+                <ChartMarker>
+                  <Style />
+                </ChartMarker>
+                <ChartDataLabel>
+                  <Style />
+                </ChartDataLabel>
+              </ChartEmptyPoints>
+              <ValueAxisName>Primary</ValueAxisName>
+              <CategoryAxisName>Primary</CategoryAxisName>
+              <ChartSmartLabel>
+                <CalloutLineColor>Black</CalloutLineColor>
+                <MinMovingDistance>0pt</MinMovingDistance>
+              </ChartSmartLabel>
+            </ChartSeries>
+          </ChartSeriesCollection>
+        </ChartData>
+        <ChartAreas>
+          <ChartArea Name="Default">
+            <ChartCategoryAxes>
+              <ChartAxis Name="Primary">
+                <Style>
+                  <Border>
+                    <Color>Gray</Color>
+                  </Border>
+                  <FontSize>8pt</FontSize>
+                  <Color>Gray</Color>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </ChartAxisTitle>
+                <Interval>1</Interval>
+                <ChartMajorGridLines>
+                  <Enabled>False</Enabled>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMajorTickMarks>
+                  <Style>
+                    <Border>
+                      <Color>Gray</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorTickMarks>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+                <Angle>-45</Angle>
+                <LabelsAutoFitDisabled>true</LabelsAutoFitDisabled>
+                <ChartAxisScaleBreak>
+                  <Style />
+                </ChartAxisScaleBreak>
+              </ChartAxis>
+              <ChartAxis Name="Secondary">
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption>Axis Title</Caption>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </ChartAxisTitle>
+                <ChartMajorGridLines>
+                  <Enabled>False</Enabled>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Location>Opposite</Location>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+                <ChartAxisScaleBreak>
+                  <Style />
+                </ChartAxisScaleBreak>
+              </ChartAxis>
+            </ChartCategoryAxes>
+            <ChartValueAxes>
+              <ChartAxis Name="Primary">
+                <Style>
+                  <Border>
+                    <Color>Gray</Color>
+                  </Border>
+                  <FontSize>8pt</FontSize>
+                  <Color>Gray</Color>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption />
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </ChartAxisTitle>
+                <ChartMajorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Width>0.5pt</Width>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMajorTickMarks>
+                  <Enabled>False</Enabled>
+                </ChartMajorTickMarks>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+                <ChartAxisScaleBreak>
+                  <Style />
+                </ChartAxisScaleBreak>
+              </ChartAxis>
+              <ChartAxis Name="Secondary">
+                <Style>
+                  <FontSize>8pt</FontSize>
+                </Style>
+                <ChartAxisTitle>
+                  <Caption>Axis Title</Caption>
+                  <Style>
+                    <FontSize>8pt</FontSize>
+                  </Style>
+                </ChartAxisTitle>
+                <ChartMajorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                    </Border>
+                  </Style>
+                </ChartMajorGridLines>
+                <ChartMinorGridLines>
+                  <Style>
+                    <Border>
+                      <Color>Gainsboro</Color>
+                      <Style>Dotted</Style>
+                    </Border>
+                  </Style>
+                </ChartMinorGridLines>
+                <ChartMinorTickMarks>
+                  <Length>0.5</Length>
+                </ChartMinorTickMarks>
+                <CrossAt>NaN</CrossAt>
+                <Location>Opposite</Location>
+                <Minimum>NaN</Minimum>
+                <Maximum>NaN</Maximum>
+                <ChartAxisScaleBreak>
+                  <Style />
+                </ChartAxisScaleBreak>
+              </ChartAxis>
+            </ChartValueAxes>
+            <Style>
+              <BackgroundGradientType>None</BackgroundGradientType>
+            </Style>
+          </ChartArea>
+        </ChartAreas>
+        <ChartTitles>
+          <ChartTitle Name="Default">
+            <Caption>Order Quantity by Month</Caption>
+            <Style>
+              <BackgroundGradientType>None</BackgroundGradientType>
+              <FontSize>11pt</FontSize>
+              <FontWeight>Bold</FontWeight>
+              <TextAlign>General</TextAlign>
+              <VerticalAlign>Top</VerticalAlign>
+              <Color>DimGray</Color>
+            </Style>
+          </ChartTitle>
+        </ChartTitles>
+        <Palette>BrightPastel</Palette>
+        <ChartBorderSkin>
+          <Style>
+            <BackgroundColor>Gray</BackgroundColor>
+            <BackgroundGradientType>None</BackgroundGradientType>
+            <Color>White</Color>
+          </Style>
+        </ChartBorderSkin>
+        <ChartNoDataMessage Name="NoDataMessage">
+          <Caption>No Data Available</Caption>
+          <Style>
+            <BackgroundGradientType>None</BackgroundGradientType>
+            <TextAlign>General</TextAlign>
+            <VerticalAlign>Top</VerticalAlign>
+          </Style>
+        </ChartNoDataMessage>
+        <DataSetName>LinearRegression</DataSetName>
+        <Top>0.39667in</Top>
+        <Left>0.32167in</Left>
+        <Height>3.6in</Height>
+        <Width>5.65833in</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <BackgroundColor>White</BackgroundColor>
+          <BackgroundGradientType>None</BackgroundGradientType>
+        </Style>
+      </Chart>
+    </ReportItems>
+    <Height>4.38in</Height>
+    <Style />
+  </Body>
+  <Width>6.5in</Width>
+  <Page>
+    <LeftMargin>1in</LeftMargin>
+    <RightMargin>1in</RightMargin>
+    <TopMargin>1in</TopMargin>
+    <BottomMargin>1in</BottomMargin>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="Localhost">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString>Data Source=.;Initial Catalog=AdventureWorksDW2012</ConnectString>
+        <IntegratedSecurity>true</IntegratedSecurity>
+      </ConnectionProperties>
+      <rd:SecurityType>Integrated</rd:SecurityType>
+      <rd:DataSourceID>b67074c8-66ee-4a57-b12b-1e5efb1baaec</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="LinearRegression">
+      <Query>
+        <DataSourceName>Localhost</DataSourceName>
+        <CommandText>-- clean-up
+IF OBJECT_ID('Tempdb..#Temp_Regression') IS NOT NULL
+	DROP TABLE #Temp_Regression;
+
+-- create sample data. Trend is an empty column that will hold the calculated linear regression later on.
+SELECT ID = 1, OrderMonth = 'Jan 2014', OrderQuantity = 45, Trend = CONVERT(DECIMAL(38, 10),NULL)
+INTO #Temp_Regression
+UNION ALL
+SELECT ID = 2, OrderMonth = 'Feb 2014', OrderQuantity = 41, Trend = CONVERT(DECIMAL(38, 10),NULL)
+UNION ALL
+SELECT ID = 3, OrderMonth = 'Mar 2014', OrderQuantity = 60, Trend = CONVERT(DECIMAL(38, 10),NULL)
+UNION ALL
+SELECT ID = 4, OrderMonth = 'Apr 2014', OrderQuantity = 50, Trend = CONVERT(DECIMAL(38, 10),NULL)
+UNION ALL
+SELECT ID = 5, OrderMonth = 'May 2014', OrderQuantity = 53, Trend = CONVERT(DECIMAL(38, 10),NULL)
+UNION ALL
+SELECT ID = 6, OrderMonth = 'Jun 2014', OrderQuantity = 58, Trend = CONVERT(DECIMAL(38, 10),NULL)
+UNION ALL
+SELECT ID = 7, OrderMonth = 'Jul 2014', OrderQuantity = 65, Trend = CONVERT(DECIMAL(38, 10),NULL)
+UNION ALL
+SELECT ID = 8, OrderMonth = 'Aug 2014', OrderQuantity = 70, Trend = CONVERT(DECIMAL(38, 10),NULL)
+UNION ALL
+SELECT ID = 9, OrderMonth = 'Sep 2014', OrderQuantity = 63, Trend = CONVERT(DECIMAL(38, 10),NULL);
+
+-- declare all variables
+DECLARE @sample_size	INT; 
+DECLARE @intercept		DECIMAL(38, 10);
+DECLARE @slope			DECIMAL(38, 10);
+DECLARE @sumX			DECIMAL(38, 10);
+DECLARE @sumY			DECIMAL(38, 10);
+DECLARE @sumXX			DECIMAL(38, 10);
+DECLARE @sumYY			DECIMAL(38, 10);
+DECLARE @sumXY			DECIMAL(38, 10);
+
+-- calculate sample size and the different sums
+SELECT
+	 @sample_size	= COUNT(*)
+	,@sumX			= SUM(ID)
+	,@sumY			= SUM([OrderQuantity])
+	,@sumXX			= SUM(ID*ID)
+	,@sumYY			= SUM([OrderQuantity]*[OrderQuantity])
+	,@sumXY			= SUM(ID*[OrderQuantity])
+FROM #Temp_Regression;
+
+-- calculate the slope and intercept
+SET @slope = CASE WHEN @sample_size = 1
+				THEN 0
+				ELSE (@sample_size * @sumXY - @sumX * @sumY) / (@sample_size * @sumXX - POWER(@sumX,2))
+			 END;
+SET @intercept = (@sumY - (@slope*@sumX)) / @sample_size;
+
+-- calculate trend line
+UPDATE #Temp_Regression
+SET Trend = (@slope*ID) + @intercept;
+
+/* calculate predicted values */
+
+-- create a full list of 12 months
+WITH CTE_AllIDs AS
+(
+	SELECT TOP 12 ID = ROW_NUMBER() OVER (ORDER BY (SELECT NULL))
+	FROM sys.columns
+)
+SELECT
+	 c.ID
+	,OrderMonth		= CASE WHEN r.ID IS NOT NULL
+							THEN r.OrderMonth
+							-- elaborate function to get the short month name and year
+							ELSE CONCAT(LEFT(DATENAME(MONTH,CONVERT(DATE,CONCAT('2014','-',c.ID,'-','01'))),3),' 2014')
+					  END
+	,OrderQuantity
+	,Trend
+	,Forecast		= CASE	WHEN Trend IS NOT NULL AND c.ID &lt;&gt; (SELECT MAX(ID) FROM #Temp_Regression)
+								THEN NULL
+							-- For the last actual value (September in this example), we want forecast to have the same
+							-- value as the trendline (instead of NULL). This prevents a gap in the line charts in SSRS.
+							WHEN Trend IS NOT NULL AND c.ID = (SELECT MAX(ID) FROM #Temp_Regression)
+								THEN Trend
+							-- If trend is not found, it means we can calculate a forecast.
+							-- However, we also need to check if the month for which we calculate the forecast comes after
+							-- the actual values. Suppose we don't have values for January, then we don't want to calculate
+							-- a forecast for January as well. Only for the last 3 months of the year in this example.
+							WHEN Trend IS NULL AND c.ID &gt; (SELECT MAX(ID) FROM #Temp_Regression)
+								THEN (@slope * (c.ID % 100)) + @intercept
+							ELSE NULL
+					  END
+FROM		CTE_AllIDs			c
+LEFT JOIN	#Temp_Regression	r ON c.ID = r.ID;
+
+-- clean-up
+IF OBJECT_ID('Tempdb..#Temp_Regression') IS NOT NULL
+	DROP TABLE #Temp_Regression;</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="ID">
+          <DataField>ID</DataField>
+          <rd:TypeName>System.Int64</rd:TypeName>
+        </Field>
+        <Field Name="OrderMonth">
+          <DataField>OrderMonth</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="OrderQuantity">
+          <DataField>OrderQuantity</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="Trend">
+          <DataField>Trend</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Forecast">
+          <DataField>Forecast</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>8a0e6664-ef5d-435d-9162-12596347013d</rd:ReportID>
+</Report>

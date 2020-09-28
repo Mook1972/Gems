@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "PRJ_DMG_DBStats", "PRJ_DMG_DBStats\PRJ_DMG_DBStats.rptproj", "{F89C4E3A-58BD-4F65-A199-C73D029B95CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
+		Release|Default = Release|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F89C4E3A-58BD-4F65-A199-C73D029B95CF}.Debug|Default.ActiveCfg = Debug
+		{F89C4E3A-58BD-4F65-A199-C73D029B95CF}.Debug|Default.Build.0 = Debug
+		{F89C4E3A-58BD-4F65-A199-C73D029B95CF}.Debug|Default.Deploy.0 = Debug
+		{F89C4E3A-58BD-4F65-A199-C73D029B95CF}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{F89C4E3A-58BD-4F65-A199-C73D029B95CF}.DebugLocal|Default.Build.0 = DebugLocal
+		{F89C4E3A-58BD-4F65-A199-C73D029B95CF}.Release|Default.ActiveCfg = Release
+		{F89C4E3A-58BD-4F65-A199-C73D029B95CF}.Release|Default.Build.0 = Release
+		{F89C4E3A-58BD-4F65-A199-C73D029B95CF}.Release|Default.Deploy.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
